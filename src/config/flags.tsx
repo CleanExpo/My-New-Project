@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface FeatureFlag {
+export interface FeatureFlag {
   name: string
   description: string
   enabled: boolean

@@ -75,9 +75,15 @@ export function calculateOverallScore(scores: CategoryScores): number {
  * Get health status emoji and label
  */
 export function getHealthStatus(score: number): { emoji: string; label: string; color: string } {
-  if (score >= 90) return { emoji: '🟢', label: 'Excellent', color: 'green' };
-  if (score >= 70) return { emoji: '🟡', label: 'Good', color: 'yellow' };
-  if (score >= 50) return { emoji: '🟠', label: 'Fair', color: 'orange' };
+  if (score >= 90) {
+    return { emoji: '🟢', label: 'Excellent', color: 'green' };
+  }
+  if (score >= 70) {
+    return { emoji: '🟡', label: 'Good', color: 'yellow' };
+  }
+  if (score >= 50) {
+    return { emoji: '🟠', label: 'Fair', color: 'orange' };
+  }
   return { emoji: '🔴', label: 'Critical', color: 'red' };
 }
 
