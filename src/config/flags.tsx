@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface FeatureFlag {
   name: string
   description: string

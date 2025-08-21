@@ -1,8 +1,8 @@
 # NEW PROJECT PATHWAY - One-Command Initializer
-# Usage: irm https://raw.githubusercontent.com/yourusername/new-project-pathway/main/init.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/CleanExpo/My-New-Project/main/init.ps1 | iex
 
 param(
-    [string]$RepoUrl = "https://github.com/yourusername/new-project-pathway.git",
+    [string]$RepoUrl = "https://github.com/CleanExpo/My-New-Project.git",
     [string]$ProjectName = ""
 )
 
@@ -96,6 +96,10 @@ AI_SERVICE_URL=http://localhost:5051
 # Run environment check
 Write-Line "`n🩺 Running health check..." -Color Cyan
 npm run env:doctor
+
+# Run build validation
+Write-Line "`n🔍 Running build validation..." -Color Cyan
+node scripts/build-validator.js
 
 # Create auto-start script
 Write-Line "`n✅ Creating launcher..." -Color Green

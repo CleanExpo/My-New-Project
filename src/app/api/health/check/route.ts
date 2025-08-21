@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { runHealthCheck } from '@/utils/health/scoring';
+import { runHealthCheck, type HealthScore } from '@/utils/health/scoring';
 
-export async function GET(request: NextRequest) {
+// Force dynamic rendering for runtime health checks
+export const dynamic = 'force-dynamic';
+
+export async function GET(_request: NextRequest) {
   try {
     // Run the health check
     const healthScore = await runHealthCheck();
@@ -33,9 +36,9 @@ function getHealthStatus(score: number) {
   return { emoji: '🔴', label: 'Critical', color: 'red' };
 }
 
-function generateSummary(health: any) {
-  const criticalIssues = health.issues.filter((i: any) => i.severity === 'critical');
-  const majorIssues = health.issues.filter((i: any) => i.severity === 'major');
+function generateSummary(health: HealthScore) {
+  const criticalIssues = health.issues.filter((i) => i.severity === 'critical');
+  const majorIssues = health.issues.filter((i) => i.severity === 'major');
   
   return {
     overall: `Project health is ${getHealthStatus(health.overall).label.toLowerCase()} at ${health.overall}/100`,
@@ -46,7 +49,7 @@ function generateSummary(health: any) {
   };
 }
 
-function getTopRecommendation(health: any) {
+function getTopRecommendation(health: HealthScore) {
   if (health.overall >= 90) {
     return 'Excellent work! Keep maintaining high standards.';
   }

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { featureFlags } from '@/config/flags';
-import { env } from '@/config/env';
+
+// Force dynamic rendering for runtime API calls
+export const dynamic = 'force-dynamic';
 
 const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://localhost:5051';
 

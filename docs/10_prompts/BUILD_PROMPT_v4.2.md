@@ -41,7 +41,22 @@ Required vars: NODE_ENV, NEXT_PUBLIC_APP_NAME, AI_SERVICE_URL
 Optional profiles: none (or list if needed)
 ```
 
-### Phase 2: Implementation
+### Phase 2: Pre-Build Validation
+Status: `planned`
+
+✅ **I WILL DO THIS**: Run build validator before implementation:
+```bash
+node scripts/build-validator.js
+```
+
+Common issues to prevent:
+- JSX in .ts files → rename to .tsx
+- Missing React imports → add import React from 'react'
+- API routes without dynamic export → add export const dynamic = 'force-dynamic'
+- Unused parameters → prefix with underscore (_request)
+- TypeScript any → define proper interfaces
+
+### Phase 3: Implementation
 Status: `planned`
 
 ✅ **I WILL DO THIS**: Write code with specific evidence:

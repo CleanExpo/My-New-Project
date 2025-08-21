@@ -3,7 +3,7 @@
 **The AI-Led Development Platform for Non-Coders**  
 Build production-ready applications with zero coding through Claude Code's orchestrated agent system.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/yourusername/new-project-pathway)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/CleanExpo/My-New-Project)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D4)](https://www.microsoft.com/windows)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
@@ -33,10 +33,10 @@ A complete development system that transforms ideas into deployed applications t
 ### 🎯 SIMPLEST: One-Command Setup (NEW!)
 ```powershell
 # Just run this in any folder:
-irm https://raw.githubusercontent.com/yourusername/new-project-pathway/main/init.ps1 | iex
+irm https://raw.githubusercontent.com/CleanExpo/My-New-Project/main/init.ps1 | iex
 
 # Or if you have the repo URL:
-.\quick-setup.ps1 https://github.com/yourusername/new-project-pathway
+.\quick-setup.ps1 https://github.com/CleanExpo/My-New-Project
 ```
 **That's it!** The script will:
 - ✅ Install prerequisites if needed
@@ -57,7 +57,7 @@ cd my-awesome-app
 
 #### 2️⃣ Get NEW PROJECT PATHWAY
 ```powershell
-git clone https://github.com/yourusername/new-project-pathway.git .
+git clone https://github.com/CleanExpo/My-New-Project.git .
 Remove-Item -Recurse -Force .git
 git init -b main
 npm install
@@ -75,7 +75,7 @@ npm install
 ### 🤖 In Claude Code (Auto-Start)
 Just paste this:
 ```
-https://github.com/yourusername/your-project
+https://github.com/CleanExpo/My-New-Project.git
 ```
 Or simply say:
 ```
@@ -95,7 +95,7 @@ Transform your chaotic codebase into a well-structured application:
 ### 1️⃣ Add to Existing Project
 ```powershell
 # In your project root
-git remote add pathway https://github.com/yourusername/new-project-pathway.git
+git remote add pathway https://github.com/CleanExpo/My-New-Project.git
 git fetch pathway
 git checkout -b rescue-mission
 
@@ -383,7 +383,7 @@ npm run pathway
 
 **NEW PROJECT PATHWAY** - Where ideas become reality without writing code.
 
-[Get Started](https://github.com/yourusername/new-project-pathway) • [Documentation](docs/) • [Report Issues](https://github.com/yourusername/new-project-pathway/issues)
+[Get Started](https://github.com/CleanExpo/My-New-Project) • [Documentation](docs/) • [Report Issues](https://github.com/CleanExpo/My-New-Project/issues)
 
 Made with ❤️ for non-coders and developers alike
 
